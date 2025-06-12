@@ -1,0 +1,1 @@
+Function num_smaller(seq, x) takes in an integer x and a sorted integer sequence seq, and returns the number of elements in seq that is strictly smaller than x.

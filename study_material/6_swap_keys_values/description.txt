@@ -1,0 +1,1 @@
+Write a function swap_keys_values that takes in a dictionary, and returns a new dictionary with the keys and values swapped.

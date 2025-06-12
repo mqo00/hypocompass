@@ -1,0 +1,416 @@
+[
+    {
+        "code_name": "1693174464_1.py",
+        "code": "def sort_age(people):\n    for i in range(len(people)):\n        for j in range(i+1, len(people)):\n            if people[i][1] < people[j][1]:\n                people[i], people[j] = people[j], people[i]\n    return people",
+        "pass": true,
+        "display_distractor": false
+    },
+    {
+        "code_name": "1693174464_3.py",
+        "code": "def sort_age(people):\n    return sorted(people, key=lambda x: (x[1], x[0]), reverse=True)",
+        "pass": true,
+        "display_distractor": false
+    },
+    {
+        "code_name": "1693174464_4.py",
+        "code": "def sort_age(people):\n    return sorted(people, key=lambda x: x[1], reverse=True)",
+        "pass": true,
+        "display_distractor": false
+    },
+    {
+        "code_name": "1693174469_0.py",
+        "code": "def sort_age(people):\n    sorted_people = sorted(people, key=lambda x: x[1], reverse=True)\n    return sorted_people",
+        "pass": true,
+        "display_distractor": false
+    },
+    {
+        "code_name": "1693174469_1.py",
+        "code": "def sort_age(people):\n    sorted_people = sorted(people, key=lambda x: x[1])\n    sorted_people.reverse()\n    return sorted_people",
+        "pass": true,
+        "display_distractor": false
+    },
+    {
+        "code_name": "1693174469_2.py",
+        "code": "def sort_age(people):\n    sorted_people = sorted(people, key=lambda x: x[1])\n    return sorted_people[::-1]",
+        "pass": true,
+        "display_distractor": false
+    },
+    {
+        "code_name": "1693174494_0.py",
+        "code": "def sort_age(people):\n    sorted_people = sorted(people, key=lambda x: (x[1], x[0]), reverse=True)\n    return sorted_people",
+        "pass": true,
+        "display_distractor": false
+    },
+    {
+        "code_name": "1693174494_4.py",
+        "code": "def sort_age(people):\n    sorted_people = sorted(people, key=lambda x: (x[1], x[0]))\n    sorted_people.reverse()\n    return sorted_people",
+        "pass": true,
+        "display_distractor": false
+    },
+    {
+        "code_name": "1693174498_0.py",
+        "code": "def sort_age(people):\n    sorted_people = sorted(people, key=lambda person: person[1], reverse=True)\n    return sorted_people",
+        "pass": true,
+        "display_distractor": false
+    },
+    {
+        "code_name": "1693174498_1.py",
+        "code": "def sort_age(people):\n    sorted_people = sorted(people, key=lambda person: person[1])\n    return sorted_people[::-1]",
+        "pass": true,
+        "display_distractor": false
+    },
+    {
+        "code_name": "1693174498_2.py",
+        "code": "def sort_age(people):\n    sorted_people = sorted(people, key=lambda person: -person[1])\n    return sorted_people",
+        "pass": true,
+        "display_distractor": false
+    },
+    {
+        "code_name": "1693174507_3.py",
+        "code": "def sort_age(people):\n    people.sort(key=lambda x: x[1], reverse=True)\n    return people",
+        "pass": true,
+        "display_distractor": false
+    },
+    {
+        "code_name": "1693174513_0.py",
+        "code": "def sort_age(people):\n    return sorted(people, key=lambda x: int(x[1]), reverse=True)",
+        "pass": true,
+        "display_distractor": false
+    },
+    {
+        "code_name": "1693174520_1.py",
+        "code": "def sort_age(people):\n    sorted_people = sorted(people, key=lambda x: -x[1])\n    return sorted_people",
+        "pass": true,
+        "display_distractor": false
+    },
+    {
+        "code_name": "1693174464_0.py",
+        "code": "def sort_age(people):\n    return sorted(people, key=lambda x: x[1])",
+        "pass": false,
+        "expl_instruction": "Your code sorts the list in ascending order by age, which means the youngest people are at the front of the list. However, the problem requires the older people to be at the front",
+        "fix_instruction": "To fix this, you need to add a parameter to the sorted function to sort the list in descending order.",
+        "fixed_code_name": "1693174464_4.py",
+        "display_distractor": true,
+        "distractor_dict": {
+            "1693174502_3.py": {
+                "diff_test_hint": "But if that's the case, shouldn't sort_age([(\"F\", 19)]) give me <class 'IndexError'> tuple index out of range? Currently my code would output [('F', 19)].",
+                "diff_test": [
+                    "[(\"F\", 19)]",
+                    "[('F', 19)]",
+                    "<IndexError> tuple index out of range"
+                ]
+            },
+            "1693174471_0.py": {
+                "diff_test_hint": "But if that's the case, shouldn't sort_age([(\"F\", 19)]) give me None? Currently my code would output [('F', 19)].",
+                "diff_test": [
+                    "[(\"F\", 19)]",
+                    "[('F', 19)]",
+                    "None"
+                ]
+            }
+        }
+    },
+    {
+        "code_name": "1693174464_2.py",
+        "code": "def sort_age(people):\n    return sorted(people, key=lambda x: x[1] > x[1])",
+        "pass": false,
+        "expl_instruction": "The key function in your sorted() call is incorrect. It's comparing an element's age to itself, which always returns False. This means your list isn't being sorted correctly. The sorted list is in ascending order, but the problem asks for the list to be sorted in descending order so that older people are at the front.",
+        "fix_instruction": "You should return the age directly as the key for sorting. Replace `x[1] > x[1]` with `x[1]`. pass reverse=True in sorted to sort in descending order..",
+        "fixed_code_name": "1693174464_4.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1693174471_0.py",
+        "code": "def sort_age(people):\n    people.sort(key=lambda x: x[1], reverse=True)",
+        "pass": false,
+        "expl_instruction": "Your code is almost correct. It sorts the list of tuples based on the second element of each tuple (the age) in descending order. The bug is that you're not returning the sorted list from the function",
+        "fix_instruction": "Add a return statement at the end of your function to return the sorted list.",
+        "fixed_code_name": "1693174507_3.py",
+        "display_distractor": true,
+        "distractor_dict": {
+            "1693174502_3.py": {
+                "diff_test_hint": "But if that's the case, shouldn't sort_age([(\"F\", 19)]) give me <class 'IndexError'> tuple index out of range? Currently my code would output None.",
+                "diff_test": [
+                    "[(\"F\", 19)]",
+                    "None",
+                    "<IndexError> tuple index out of range"
+                ]
+            },
+            "1693174464_0.py": {
+                "diff_test_hint": "But if that's the case, shouldn't sort_age([(\"F\", 19)]) give me [('F', 19)]? Currently my code would output None.",
+                "diff_test": [
+                    "[(\"F\", 19)]",
+                    "None",
+                    "[('F', 19)]"
+                ]
+            }
+        }
+    },
+    {
+        "code_name": "1693174471_1.py",
+        "code": "def sort_age(people):\n    sorted_people = people.sort(key=lambda x: x[1], reverse=True)\n    return sorted_people",
+        "pass": false,
+        "expl_instruction": "The sort() method sorts the list in-place, meaning it modifies the original list and returns None. So, sorted_people is actually None",
+        "fix_instruction": "Use the sorted() function instead, which returns a new sorted list and doesn't modify the original list.",
+        "fixed_code_name": "1693174469_0.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1693174471_3.py",
+        "code": "def sort_age(people):\n    sorted_people = sorted(people, key=lambda x: x[0], reverse=True)\n    return sorted_people",
+        "pass": false,
+        "expl_instruction": "Your code is sorting the list of people based on the first element of each tuple, which is the gender, not the age. The bug is that the sorting is not done based on age",
+        "fix_instruction": "Change the key in the sorted function to x[1] to sort by age instead of gender.",
+        "fixed_code_name": "1693174469_0.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1693174476_0.py",
+        "code": "def sort_age(people):\n    sorted_people = sorted(people, key=lambda x: x[0])\n    return sorted_people",
+        "pass": false,
+        "expl_instruction": "Your code is currently sorting the list of people based on the first element of the tuple, which is the gender, not the age. This is why you're not getting the expected result. The sorted function sorts in ascending order by default, so the younger people are at the front of the list, not the older people.",
+        "fix_instruction": "Change the key in the sorted function to sort by the second element of the tuple, which is the age. Use `key=lambda x: x[1]` instead of `key=lambda x: x[0]`.. Add the `reverse=True` parameter to the sorted function to sort the list in descending order..",
+        "fixed_code_name": "1693174469_0.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1693174476_2.py",
+        "code": "def sort_age(people):\n    sorted_people = sorted(people, key=lambda x: x[1])\n    return sorted_people",
+        "pass": false,
+        "expl_instruction": "Your code is sorting the list of people in ascending order of age, which means the younger people are at the front of the list, not the older ones as required",
+        "fix_instruction": "To fix this bug, you need to add a parameter 'reverse=True' to the sorted function, which will sort the list in descending order.",
+        "fixed_code_name": "1693174469_0.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1693174480_2.py",
+        "code": "def sort_age(people):\n    sorted_people = sorted(people, key=lambda x: x[1], reverse=False)\n    return sorted_people",
+        "pass": false,
+        "expl_instruction": "Your code is sorting the list of people in ascending order of age, which means the youngest people are at the front of the list, not the oldest. This is because you've set `reverse=False` in the `sorted` function",
+        "fix_instruction": "To fix this bug, you should set `reverse=True` in the `sorted` function to sort the list in descending order of age.",
+        "fixed_code_name": "1693174469_0.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1693174480_3.py",
+        "code": "def sort_age(people):\n    sorted_people = sorted(people, key=lambda x: x[0], reverse=False)\n    return sorted_people",
+        "pass": false,
+        "expl_instruction": "Your code is currently sorting the list of people based on the gender, not the age. This is because in the lambda function, x[0] refers to the first element of each tuple, which is the gender; bug: The sorting is based on gender instead of age. The sorted list is in ascending order, but the problem asks for the list to be sorted in descending order so that older people are at the front; bug: The list is sorted in the wrong order.",
+        "fix_instruction": "Change the key in the lambda function to x[1] to sort by age.. Change reverse=False to reverse=True to sort in descending order..",
+        "fixed_code_name": "1693174469_0.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1693174480_4_fixed_1693191258.py",
+        "code": "def sort_age(people):\n    sorted_people = sorted(people, key=lambda x: x[1], reverse=False)\n    sorted_people.reverse()\n    return sorted_people",
+        "pass": true,
+        "display_distractor": false
+    },
+    {
+        "code_name": "1693174480_4.py",
+        "code": "def sort_age(people):\n    sorted_people = sorted(people, key=lambda x: x[0], reverse=False)\n    sorted_people.reverse()\n    return sorted_people",
+        "pass": false,
+        "expl_instruction": "Your code is currently sorting the list of tuples based on the first element of each tuple, which is the gender, not the age. This is not what the problem statement asks for",
+        "fix_instruction": "Change the key in the sorted function to sort by the second element of the tuple, which is the age.",
+        "fixed_code_name": "1693174480_4_fixed_1693191258.py",
+        "display_distractor": true,
+        "distractor_dict": {
+            "1693174464_0.py": {
+                "diff_test_hint": "But if that's the case, shouldn't sort_age([(\"M\", 35), (\"F\", 18), (\"M\", 23), (\"F\", 19), (\"M\", 30), (\"M\", 17)]) give me [('M', 17), ('F', 18), ('F', 19), ('M', 23), ('M', 30), ('M', 35)]? Currently my code would output [('M', 17), ('M', 30), ('M', 23), ('M', 35), ('F', 19), ('F', 18)].",
+                "diff_test": [
+                    "[(\"M\", 35), (\"F\", 18), (\"M\", 23), (\"F\", 19), (\"M\", 30), (\"M\", 17)]",
+                    "[('M', 17), ('M', 30), ('M', 23), ('M', 35), ('F', 19), ('F', 18)]",
+                    "[('M', 17), ('F', 18), ('F', 19), ('M', 23), ('M', 30), ('M', 35)]"
+                ]
+            },
+            "1693174464_2.py": {
+                "diff_test_hint": "But if that's the case, shouldn't sort_age([(\"M\", 35), (\"F\", 18), (\"M\", 23), (\"F\", 19), (\"M\", 30), (\"M\", 17)]) give me [('M', 35), ('F', 18), ('M', 23), ('F', 19), ('M', 30), ('M', 17)]? Currently my code would output [('M', 17), ('M', 30), ('M', 23), ('M', 35), ('F', 19), ('F', 18)].",
+                "diff_test": [
+                    "[(\"M\", 35), (\"F\", 18), (\"M\", 23), (\"F\", 19), (\"M\", 30), (\"M\", 17)]",
+                    "[('M', 17), ('M', 30), ('M', 23), ('M', 35), ('F', 19), ('F', 18)]",
+                    "[('M', 35), ('F', 18), ('M', 23), ('F', 19), ('M', 30), ('M', 17)]"
+                ]
+            }
+        }
+    },
+    {
+        "code_name": "1693174484_2.py",
+        "code": "def sort_age(people):\n    return sorted(people, key=lambda x: x[1], reverse=False)",
+        "pass": false,
+        "expl_instruction": "Your code sorts the list of people in ascending order of age, which means the youngest people are at the front of the list. This is the opposite of what the problem statement asks for",
+        "fix_instruction": "To fix this, you should set the 'reverse' parameter in the 'sorted' function to 'True'. This will sort the list in descending order, so the oldest people are at the front.",
+        "fixed_code_name": "1693174464_4.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1693174484_3.py",
+        "code": "def sort_age(people):\n    return people[::-1]",
+        "pass": false,
+        "expl_instruction": "Your code currently just reverses the list, it doesn't sort the people by age. The bug is that you're not using any sorting function",
+        "fix_instruction": "Use the sorted() function with a custom sorting key that sorts by the age in the tuples.",
+        "fixed_code_name": "1693174464_4.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1693174494_1.py",
+        "code": "def sort_age(people):\n    sorted_people = sorted(people, key=lambda x: (x[1], x[0]), reverse=False)\n    return sorted_people",
+        "pass": false,
+        "expl_instruction": "Your code sorts the list in ascending order of age, but the problem statement asks for the list to be sorted in descending order. The 'reverse=False' argument in the sorted function is causing this issue",
+        "fix_instruction": "Change 'reverse=False' to 'reverse=True' to sort the list in descending order of age.",
+        "fixed_code_name": "1693174494_0.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1693174494_3.py",
+        "code": "def sort_age(people):\n    sorted_people = sorted(people, reverse=True)\n    return sorted_people",
+        "pass": false,
+        "expl_instruction": "Your code is currently sorting the entire tuple, which means it's sorting by gender first and then by age. This is not what you want, as you only want to sort by age",
+        "fix_instruction": "Use a key function in the sorted() function to specify that you want to sort by the second element of each tuple (the age).",
+        "fixed_code_name": "1693174469_0.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1693174498_3.py",
+        "code": "def sort_age(people):\n    sorted_people = sorted(people, key=lambda person: person[1], reverse=False)\n    return sorted_people",
+        "pass": false,
+        "expl_instruction": "Your code is sorting the list of people in ascending order of age, which means the younger people are at the front of the list, not the older ones as required by the problem",
+        "fix_instruction": "To fix this, you should set the 'reverse' parameter to True in the sorted function to sort the list in descending order.",
+        "fixed_code_name": "1693174498_0.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1693174502_0.py",
+        "code": "def sort_age(people):\n    return sorted(people, key=lambda x: int(x[1]))",
+        "pass": false,
+        "expl_instruction": "Your code sorts the list in ascending order by age, which means the youngest people are at the front of the list, not the oldest. This is the opposite of what the problem asks for",
+        "fix_instruction": "To fix this, you need to add a reverse=True parameter to the sorted function to sort the list in descending order.",
+        "fixed_code_name": "1693174513_0.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1693174502_1.py",
+        "code": "def sort_age(people):\n    return sorted(people, key=lambda x: x[0])",
+        "pass": false,
+        "expl_instruction": "Your code is currently sorting the list of people based on the first element of the tuple which is 'gender', not 'age'. This is not what the problem statement asks for. The sorted list is in ascending order, but the problem asks for the list to be sorted in descending order so that older people are at the front.",
+        "fix_instruction": "You should change the key in the sorted function to x[1] to sort by 'age'.. pass reverse=True in sorted to sort in descending order..",
+        "fixed_code_name": "1693174464_4.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1693174502_2_fixed_1693191267.py",
+        "code": "def sort_age(people):\n    people = sorted(people, key=lambda x: x[1], reverse=True)\n    return people",
+        "pass": true,
+        "display_distractor": false
+    },
+    {
+        "code_name": "1693174502_2.py",
+        "code": "def sort_age(people):\n    people = sorted(people, key=lambda x: x[1])\n    return people",
+        "pass": false,
+        "expl_instruction": "Your code is sorting the list of people in ascending order of age, which means the younger people are at the front of the list, not the older people as required",
+        "fix_instruction": "To fix this bug, you need to add a reverse parameter to the sorted function and set it to True, so the list is sorted in descending order.",
+        "fixed_code_name": "1693174502_2_fixed_1693191267.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1693174502_3.py",
+        "code": "def sort_age(people):\n    return sorted(people, key=lambda x: x[2])",
+        "pass": false,
+        "expl_instruction": "Your code is trying to access the third element of the tuple using `x[2]`, but the tuple only has two elements. This will cause an IndexError. The sorted list is in ascending order, but the problem asks for the list to be sorted in descending order so that older people are at the front.",
+        "fix_instruction": "Change `x[2]` to `x[1]` to access the age.. pass reverse=True in sorted to sort in descending order..",
+        "fixed_code_name": "1693174464_4.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1693174502_4_fixed_1693191269.py",
+        "code": "def sort_age(people):\n    return sorted(people, key=lambda p: p[1], reverse=True)",
+        "pass": true,
+        "display_distractor": false
+    },
+    {
+        "code_name": "1693174502_4.py",
+        "code": "def sort_age(people):\n    return sorted(people, key=lambda p: p[0])",
+        "pass": false,
+        "expl_instruction": "Your code is currently sorting the list of people based on the first element of the tuple, which is the gender, not the age. This is why you're not getting the expected output. The sort order is ascending by default, which means younger people are at the front of the list.",
+        "fix_instruction": "To fix this, you should sort by the second element of the tuple, which is the age. Change `p[0]` to `p[1]` in your lambda function.. To have older people at the front, you need to reverse the sort order. Add `reverse=True` to your `sorted` function..",
+        "fixed_code_name": "1693174502_4_fixed_1693191269.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1693174502_5_fixed_1693191270.py",
+        "code": "def sort_age(people):\n    return sorted(people, key=lambda person: person[1], reverse=True)",
+        "pass": true,
+        "display_distractor": false
+    },
+    {
+        "code_name": "1693174502_5.py",
+        "code": "def sort_age(people):\n    return sorted(people)",
+        "pass": false,
+        "expl_instruction": "Your code is currently sorting the tuples in the list based on the first element of each tuple, which is the gender, not the age. This is because the sorted function, by default, sorts tuples based on their first element. This is not what you want, as you need to sort the people by age, not gender",
+        "fix_instruction": "You need to specify a key function for the sorted function that tells it to sort the tuples based on the second element, which is the age. You can do this using a lambda function: sorted(people, key=lambda person: person[1], reverse=True).",
+        "fixed_code_name": "1693174502_5_fixed_1693191270.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1693174502_6.py",
+        "code": "def sort_age(people):\n    sorted_people = sorted(people, key=lambda x: x[1])",
+        "pass": false,
+        "expl_instruction": "Your code is currently sorting the ages in ascending order, which means the youngest people are at the front of the list, not the oldest",
+        "fix_instruction": "To fix this, you need to add a reverse parameter to the sorted function and set it to True. This will sort the list in descending order.",
+        "fixed_code_name": "1693174469_0.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1693174507_0.py",
+        "code": "def sort_age(people):\n    return people.sort(reverse=True)",
+        "pass": false,
+        "expl_instruction": "The sort() method sorts the list in-place, meaning it modifies the original list and returns None. This is why your function is returning None instead of the sorted list. The sort() method without a key parameter sorts the tuples in the list based on the first element (gender) before the second (age). This is not what you want.",
+        "fix_instruction": "Use the sorted() function instead, which returns a new sorted list and leaves the original list unaffected.. Use a key parameter in the sorted() function to specify that the sorting should be based on the second element of the tuple (age)..",
+        "fixed_code_name": "1693174464_4.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1693174507_2.py",
+        "code": "def sort_age(people):\n    return sorted(people, reverse=True)",
+        "pass": false,
+        "expl_instruction": "Your code sorts the list in reverse order, but it sorts based on the entire tuple, not just the age. This means it sorts first by gender (alphabetically) and then by age",
+        "fix_instruction": "You need to specify a key function in the sorted() function to sort by age only.",
+        "fixed_code_name": "1693174464_4.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1693174510_3.py",
+        "code": "def sort_age(people):\n    people.sort(reverse=True)\n    return people",
+        "pass": false,
+        "expl_instruction": "Your code is sorting the list of tuples in reverse order, but it's sorting based on the first element of each tuple (gender), not the second element (age). So, it's not sorting by age as required",
+        "fix_instruction": "Use the `key` argument in the `sort()` function to specify that the sorting should be based on the second element of each tuple (age).",
+        "fixed_code_name": "1693174507_3.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1693174520_0.py",
+        "code": "def sort_age(people):\n    sorted_people = sorted(people, key=lambda x: (x[1], -ord(x[0])))\n    return sorted_people",
+        "pass": false,
+        "expl_instruction": "Your code is sorting by age in ascending order, but the problem requires sorting by age in descending order. Also, the part \"-ord(x[0])\" is unnecessary because gender does not affect the sorting order",
+        "fix_instruction": "Change the key in the sorted function to sort by age in descending order and remove the part related to gender.",
+        "fixed_code_name": "1693174469_0.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1693174523_2.py",
+        "code": "def sort_age(people):\n    sorted_people = sorted(people, key=lambda x: x[1], reverse=True)\n    return sorted_people[::-1]",
+        "pass": false,
+        "expl_instruction": "Your code correctly sorts the list of people by age in descending order, but then the [::-1] at the end reverses the list again, making it ascending",
+        "fix_instruction": "Simply remove the [::-1] at the end of your return statement.",
+        "fixed_code_name": "1693174469_0.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1693174523_4.py",
+        "code": "def sort_age(people):\n    sorted_people = sorted(people, key=lambda x: x[0])\n    return sorted_people[::-1]",
+        "pass": false,
+        "expl_instruction": "Your code is currently sorting the list of people based on the first element of the tuple, which is the gender, not the age. The bug is that it does not sort the people by age",
+        "fix_instruction": "Change the key in the sorted function to x[1] to sort by age instead of gender.",
+        "fixed_code_name": "1693174469_2.py",
+        "display_distractor": false
+    }
+]

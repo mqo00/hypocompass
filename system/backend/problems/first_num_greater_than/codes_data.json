@@ -1,0 +1,488 @@
+[
+    {
+        "code_name": "1691187115.py",
+        "code": "def first_num_greater_than(numbers_list, key):\n    for num in numbers_list:\n        if num > key:\n            return num\n    return None",
+        "pass": true,
+        "display_distractor": false
+    },
+    {
+        "code_name": "1691187131.py",
+        "code": "def first_num_greater_than(numbers_list, key):\n    if len(numbers_list) == 0:\n        return None\n    \n    for i in range(len(numbers_list)):\n        if numbers_list[i] > key:\n            return numbers_list[i]\n        \n    return None",
+        "pass": true,
+        "display_distractor": false
+    },
+    {
+        "code_name": "1691187166.py",
+        "code": "def first_num_greater_than(numbers_list, key):\n    for number in numbers_list:\n        if number > key:\n            return number\n    return None",
+        "pass": true,
+        "display_distractor": false
+    },
+    {
+        "code_name": "1691193088_0.py",
+        "code": "def first_num_greater_than(numbers_list, key):\n    for num in numbers_list:\n        if num > key:\n            return num",
+        "pass": true,
+        "display_distractor": false
+    },
+    {
+        "code_name": "1691193096_4.py",
+        "code": "def first_num_greater_than(numbers_list, key):\n    for num in numbers_list:\n        if num <= key:\n            continue\n        return num",
+        "pass": true,
+        "display_distractor": false
+    },
+    {
+        "code_name": "1691193103_3.py",
+        "code": "def first_num_greater_than(numbers_list, key):\n    found = False\n    for num in numbers_list:\n        if num > key:\n            found = True\n            return num\n    if not found:\n        return None",
+        "pass": true,
+        "display_distractor": false
+    },
+    {
+        "code_name": "1691193103_4.py",
+        "code": "def first_num_greater_than(numbers_list, key):\n    for i in range(len(numbers_list)):\n        if numbers_list[i] > key:\n            return numbers_list[i]\n    return None",
+        "pass": true,
+        "display_distractor": false
+    },
+    {
+        "code_name": "1691193110_1.py",
+        "code": "def first_num_greater_than(numbers_list, key):\n    num = None\n    for num in numbers_list:\n        if num > key:\n            return num",
+        "pass": true,
+        "display_distractor": false
+    },
+    {
+        "code_name": "1691193116_1.py",
+        "code": "def first_num_greater_than(numbers_list, key):\n    for i in numbers_list:\n        if i > key:\n            return i\n    return None",
+        "pass": true,
+        "display_distractor": false
+    },
+    {
+        "code_name": "1691193116_2.py",
+        "code": "def first_num_greater_than(numbers_list, key):\n    if len(numbers_list) == 0:\n        return None\n    else:\n        for i in range(len(numbers_list)):\n            if numbers_list[i] > key:\n                return numbers_list[i]\n    return None",
+        "pass": true,
+        "display_distractor": false
+    },
+    {
+        "code_name": "1691193123_2.py",
+        "code": "def first_num_greater_than(numbers_list, key):\n    num_greater_than_key = None\n\n    for num in numbers_list:\n        if num > key:\n            num_greater_than_key = num\n            break\n\n    return num_greater_than_key",
+        "pass": true,
+        "display_distractor": false
+    },
+    {
+        "code_name": "1691193138_2.py",
+        "code": "def first_num_greater_than(numbers_list, key):\n    if len(numbers_list) == 0:\n        return None\n    for num in numbers_list:\n        if num > key:\n            return num",
+        "pass": true,
+        "display_distractor": false
+    },
+    {
+        "code_name": "1691193149_1.py",
+        "code": "def first_num_greater_than(numbers_list, key):\n    if len(numbers_list) == 0:\n        return None\n    for num in numbers_list:\n        if num > key:\n            return num\n    return None",
+        "pass": true,
+        "display_distractor": false
+    },
+    {
+        "code_name": "1691193149_3.py",
+        "code": "def first_num_greater_than(numbers_list, key):\n    for num in numbers_list:\n        if num > key:\n            return num\n        None\n    return None",
+        "pass": true,
+        "display_distractor": false
+    },
+    {
+        "code_name": "1691193160_3.py",
+        "code": "def first_num_greater_than(numbers_list, key):\n    for num in numbers_list:\n        if num > key:\n            return num\n        else:\n            continue\n    return None",
+        "pass": true,
+        "display_distractor": false
+    },
+    {
+        "code_name": "1691186801.py",
+        "code": "def first_num_greater_than(numbers_list, key):\n    for num in numbers_list:\n        if num > key:\n            return num\n        if num == key:\n            return None",
+        "pass": false,
+        "expl_id": 1692108890,
+        "expl_instruction": "Your code returns None immediately when it encounters a number equal to the key. But there might be numbers greater than the key after that in the list",
+        "fix_instruction": "Remove the condition that checks if num is equal to the key.",
+        "fixed_code_name": "1691187115.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1691187123.py",
+        "code": "def first_num_greater_than(numbers_list, key):\n    for num in numbers_list:\n        if num > key:\n            return num\n        else:\n            return None",
+        "pass": false,
+        "expl_id": 1692108895,
+        "expl_instruction": "Your function returns None immediately if the first number in the list is not greater than the key, so it does not check all numbers in the list",
+        "fix_instruction": "Move the \"return None\" statement outside of the for loop so that it only returns None if no number greater than the key is found in the entire list.",
+        "fixed_code_name": "1691187115.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1691187133.py",
+        "code": "def first_num_greater_than(numbers_list, key):\n    for num in numbers_list:\n        if num > key:\n            return num\n        elif num == key:\n            return None\n        else:\n            return num",
+        "pass": false,
+        "expl_id": 1692108905,
+        "expl_instruction": "Your function returns  after checking the first number only. It returns None if num equals key or num if not, but it does not  continue to check all numbers in the list",
+        "fix_instruction": "Remove the 'elif' and 'else' conditions and keep only the 'if' condition.",
+        "fixed_code_name": "1691187115.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1691187146.py",
+        "code": "def first_num_greater_than(numbers_list, key):\n    for num in numbers_list:\n        if num > key:\n            return num\n        elif num == key:\n            return None\n        else:\n            return None",
+        "pass": false,
+        "expl_id": 1692108916,
+        "expl_instruction": "Your code returns None if the first number in the list is not greater than the key. It doesn't check the rest of the numbers in the list",
+        "fix_instruction": "Remove the else and elif clauses, and add a return None statement after the for loop. This way, the function will only return None if it has checked all the numbers and found none that are greater than the key.",
+        "fixed_code_name": "1691187115.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1691187177.py",
+        "code": "def first_num_greater_than(numbers_list, key):\n    for num in numbers_list:\n        if num > key:\n            return num\n    return num",
+        "pass": false,
+        "expl_id": 1692108926,
+        "expl_instruction": "Your code returns the last number in the list if no number is greater than the key, instead of returning None as required",
+        "fix_instruction": "Replace 'return num' in the last line with 'return None'",
+        "fixed_code_name": "1691187115.py",
+        "display_distractor": true,
+        "distractor_dict": {
+            "1691188734_5.py": {
+                "diff_test_hint": "But if that's the case, shouldn't first_num_greater_than([], 2) give me None? Currently my code would output <class 'UnboundLocalError'> local variable 'num' referenced before assignment.",
+                "diff_test": [
+                    "[], 2",
+                    "<UnboundLocalError> local variable 'num' referenced before assignment",
+                    "None"
+                ]
+            },
+            "1691193149_0.py": {
+                "diff_test_hint": "But if that's the case, shouldn't first_num_greater_than([], 2) give me None? Currently my code would output <class 'UnboundLocalError'> local variable 'num' referenced before assignment.",
+                "diff_test": [
+                    "[], 2",
+                    "<UnboundLocalError> local variable 'num' referenced before assignment",
+                    "None"
+                ]
+            }
+        }
+    },
+    {
+        "code_name": "1691187194.py",
+        "code": "def first_num_greater_than(numbers_list, key):\n    for num in numbers_list:\n        if num > key: \n            return num\n        else:\n            return None",
+        "pass": false,
+        "expl_id": 1692108931,
+        "expl_instruction": "Your code returns None if the first number in the list is not greater than the key. It should continue checking the rest of the list",
+        "fix_instruction": "Move the 'return None' statement outside of the for loop.",
+        "fixed_code_name": "1691187115.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1691188734_1.py",
+        "code": "def first_num_greater_than(numbers_list, key):\n    for num in numbers_list:\n        if num <= key:\n            return num\n    return None",
+        "pass": false,
+        "expl_id": 1692108936,
+        "expl_instruction": "Your function is returning the first number that is less than or equal to the key, not greater than the key",
+        "fix_instruction": "Change the comparison operator in the if statement from <= to >",
+        "fixed_code_name": "1691187115.py",
+        "display_distractor": true,
+        "distractor_dict": {
+            "1691193123_1.py": {
+                "diff_test_hint": "But if that's the case, shouldn't first_num_greater_than([], 2) give me []? Currently my code would output None.",
+                "diff_test": [
+                    "[], 2",
+                    "None",
+                    "[]"
+                ]
+            },
+            "1691188734_6.py": {
+                "diff_test_hint": "But if that's the case, shouldn't first_num_greater_than([1], 1) give me None? Currently my code would output 1.",
+                "diff_test": [
+                    "[1], 1",
+                    "1",
+                    "None"
+                ]
+            }
+        }
+    },
+    {
+        "code_name": "1691188734_2.py",
+        "code": "def first_num_greater_than(numbers_list, key):\n    return numbers_list[0]",
+        "pass": false,
+        "expl_id": 1692108948,
+        "expl_instruction": "Your function is always returning the first number in the list, without checking whether any number in list is greater than the key or not",
+        "fix_instruction": "You need to iterate over the list and return the first number that is greater than the key.",
+        "fixed_code_name": "1691187115.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1691188734_3.py",
+        "code": "def first_num_greater_than(numbers_list, key):\n    for num in numbers_list:\n        if num > key:\n            return num\n    return NOne",
+        "pass": false,
+        "expl_id": 1692108960,
+        "expl_instruction": "You have a typo in your return statement, NOne is an undefined variable",
+        "fix_instruction": "Replace \"NOne\" with \"None\"",
+        "fixed_code_name": "1691187115.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1691188734_4.py",
+        "code": "def first_num_greater_than(numbers_list, key):\n    for num in numbers_list:\n        if num == key:\n            return num\n    return None",
+        "pass": false,
+        "expl_id": 1692108963,
+        "expl_instruction": "Your function is returning num that is equal to key, not the number greater than the key",
+        "fix_instruction": "Change the equality check (==) in your if statement to a greater than check (>).",
+        "fixed_code_name": "1691187115.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1691188734_5.py",
+        "code": "def first_num_greater_than(numbers_list, key):\n    for num in numbers_list:\n        if num >= key:\n            return num\n    return None",
+        "pass": false,
+        "expl_id": 1692108969,
+        "expl_instruction": "Your code is returning the first number that is greater than or equal to the key, not strictly greater than the key",
+        "fix_instruction": "Change the comparison operator in the if statement from '>=' to '>' to only return numbers strictly greater than the key.",
+        "fixed_code_name": "1691187115.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1691188734_6.py",
+        "code": "def first_num_greater_than(numbers_list, key):\n    for num in numbers_list:\n        if num < key:\n            return num\n    return None",
+        "pass": false,
+        "expl_id": 1692108976,
+        "expl_instruction": "Your condition in the if statement is incorrect. You're checking if the number is less than the key, not greater",
+        "fix_instruction": "Change the condition in the if statement to num > key.",
+        "fixed_code_name": "1691187115.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1691193088_1.py",
+        "code": "def first_num_greater_than(numbers_list, key):\n    for num in numbers_list:\n        if num >= key:\n            return num\n        else:\n            return None",
+        "pass": false,
+        "expl_id": 1692108984,
+        "expl_instruction": "Your function returns None if the first number in the list is smaller than the key. Your function can also return a number that is equal to the key, not strictly greater than the key because of the '>=' operator.",
+        "fix_instruction": "Move the 'return None' statement outside of the for loop. This way, the function will return None only after it has checked all the numbers in the list.. Replace '>=' with '>' in the if condition to check for numbers strictly greater than the key..",
+        "fixed_code_name": "1691187115.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1691193088_2_fixed_1692122252.py",
+        "code": "def first_num_greater_than(numbers_list, key):\n    for num in numbers_list:\n        if num > key:\n            return num\n        elif num == key:\n            continue\n    return None",
+        "pass": true,
+        "display_distractor": false
+    },
+    {
+        "code_name": "1691193088_2.py",
+        "code": "def first_num_greater_than(numbers_list, key):\n    for num in numbers_list:\n        if num > key:\n            return num\n        elif num == key:\n            continue\n        else:\n            return None",
+        "pass": false,
+        "expl_id": 1692109003,
+        "expl_instruction": "Your function returns None as soon as it encounters a number that is smaller than the key, it only continue to check the loop if num is equal to key. But there might be numbers greater than the key later after a number smaller than key.",
+        "fix_instruction": "Remove the else clause that returns None. Instead, return None after the for loop has completed. This means that if the function hasn't returned within the loop (i.e., it hasn't found a number greater than the key), it will return None.",
+        "fixed_code_name": "1691193088_2_fixed_1692122252.py",
+        "display_distractor": true,
+        "distractor_dict": {
+            "1691187123.py": {
+                "diff_test_hint": "But if that's the case, shouldn't first_num_greater_than([1, 3, 4, 2], 1) give me None? Currently my code would output 3.",
+                "diff_test": [
+                    "[1, 3, 4, 2], 1",
+                    "3",
+                    "None"
+                ]
+            },
+            "1691193138_3.py": {
+                "diff_test_hint": "But if that's the case, shouldn't first_num_greater_than([0, 1, 2], -1) give me None? Currently my code would output 0.",
+                "diff_test": [
+                    "[0, 1, 2], -1",
+                    "0",
+                    "None"
+                ]
+            }
+        }
+    },
+    {
+        "code_name": "1691193088_3.py",
+        "code": "def first_num_greater_than(numbers_list, key):\n    if numbers_list[0] > key:\n        return numbers_list[0]\n    else:\n        return None",
+        "pass": false,
+        "expl_id": 1692109014,
+        "expl_instruction": "Your code only checks if the first number in the list is greater than key or not and returns immediately. Also if the list is empty accessing the first number will cause error.",
+        "fix_instruction": "Use a loop to iterate over all numbers in the list. Return None only after checking all numbers and finding none greater than the key",
+        "fixed_code_name": "1691187115.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1691193088_4.py",
+        "code": "def first_num_greater_than(numbers_list, key):\n    if key in numbers_list:\n        return None\n    else:\n        return numbers_list[0]",
+        "pass": false,
+        "expl_id": 1692109021,
+        "expl_instruction": "Your function is checking if the key is in the list and returns None if so, and returns the first number in list otherwise. It does not check if there's a number greater than the key in list",
+        "fix_instruction": "Use a for loop to iterate over the list and check if each number is greater than the key.",
+        "fixed_code_name": "1691187115.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1691193096_1.py",
+        "code": "def first_num_greater_than(numbers_list, key):\n    for num in numbers_list:\n        if num >= key:\n            return num",
+        "pass": false,
+        "expl_id": 1692109032,
+        "expl_instruction": "Your function is returning the first number that is greater than or equal to the key, not strictly greater than the key as the problem statement requires",
+        "fix_instruction": "Change your comparison operator from '>=' to '>' in your if statement.",
+        "fixed_code_name": "1691193088_0.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1691193096_2_fixed_1692114864.py",
+        "code": "def first_num_greater_than(numbers_list, key):\n    for num in numbers_list:\n        if num <= key:\n            continue\n        else:\n            return num",
+        "pass": true,
+        "display_distractor": false
+    },
+    {
+        "code_name": "1691193096_2.py",
+        "code": "def first_num_greater_than(numbers_list, key):\n    for num in numbers_list:\n        if num <= key:\n            return None\n        else:\n            return num",
+        "pass": false,
+        "expl_id": 1692109039,
+        "expl_instruction": "Your function returns None if the first number in list is less than or equal to the key and return num otherwise. It doesn't check all the numbers in the list",
+        "fix_instruction": "Use continue to keep checking the other numbers in the list instead of returning None immediately",
+        "fixed_code_name": "1691193096_2_fixed_1692114864.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1691193096_3.py",
+        "code": "def first_num_greater_than(numbers_list, key):\n    for num in numbers_list:\n        if num < key:\n            return num\n        else:\n            return None",
+        "pass": false,
+        "expl_id": 1692109054,
+        "expl_instruction": "Your function is returning a number if it's less than the key, not greater and it returns None otherwise. It does not finished checking all numbers.",
+        "fix_instruction": "Change the '<' operator to '>' in your if condition.. Move the 'return None' statement out of the loop..",
+        "fixed_code_name": "1691187115.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1691193096_5.py",
+        "code": "def first_num_greater_than(numbers_list, key):\n    for num in numbers_list:\n        if num < key:\n            continue\n        return num",
+        "pass": false,
+        "expl_id": 1692109063,
+        "expl_instruction": "Your code is returning the first number that is not less than the key, which includes the key itself",
+        "fix_instruction": "Change the condition in the if statement to check if the number is not greater than the key, num <= key.",
+        "fixed_code_name": "1691193096_4.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1691193103_1.py",
+        "code": "def first_num_greater_than(numbers_list, key):\n    for i in range(len(numbers_list)):\n        if numbers_list[i] > key:\n            return numbers_list[i]\n        else:\n            return None\n        \n# assert(first_num_greater_than([3, 2, 1], 2) == 3)\n# assert(first_num_greater_than([3, 2, 1], 3) == None)\n# assert(first_num_greater_than([1, 2, 3], 2) == 3)",
+        "pass": false,
+        "expl_id": 1692109068,
+        "expl_instruction": "Your code returns None if the first number in the list is not greater than the key. It doesn't check the rest of the numbers in the list",
+        "fix_instruction": "Move the \"return None\" statement out of the for loop so that it only executes after all numbers have been checked.",
+        "fixed_code_name": "1691193103_4.py",
+        "display_distractor": false,
+        "distractor_dict": {
+            "1691193088_2.py": {
+                "diff_test_hint": "But if that's the case, shouldn't first_num_greater_than([1, 2, 3], 1) give me 2? Currently my code would output None.",
+                "diff_test": [
+                    "[1, 2, 3], 1",
+                    "None",
+                    "2"
+                ]
+            },
+            "1691193138_3.py": {
+                "diff_test_hint": "But if that's the case, shouldn't first_num_greater_than([3, 2, 1], 2) give me None? Currently my code would output 3.",
+                "diff_test": [
+                    "[1, 2, 3], 2",
+                    "3",
+                    "None"
+                ]
+            }
+        }
+    },
+    {
+        "code_name": "1691193110_2.py",
+        "code": "def first_num_greater_than(numbers_list, key):\n    for num in numbers_list:\n        if num > key:\n            return num\n    return key",
+        "pass": false,
+        "expl_id": 1692109080,
+        "expl_instruction": "Your function is returning the key when there's no number greater than the key in the list. It should return None instead",
+        "fix_instruction": "Replace 'return key' with 'return None'",
+        "fixed_code_name": "1691187115.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1691193110_3.py",
+        "code": "def first_num_greater_than(numbers_list, key):\n    for num in numbers_list:\n        if num < key:\n            return num",
+        "pass": false,
+        "expl_id": 1692109085,
+        "expl_instruction": "Your function is returning the first number that is less than the key, not greater",
+        "fix_instruction": "Change the comparison operator from '<' to '>'.",
+        "fixed_code_name": "1691193088_0.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1691193123_0.py",
+        "code": "def first_num_greater_than(numbers_list, key):\n    num_greater_than_key = None\n\n    for num in numbers_list:\n        if num >= key:\n            num_greater_than_key = num\n            break\n\n    return num_greater_than_key",
+        "pass": false,
+        "expl_id": 1692109098,
+        "expl_instruction": "Your condition checks if the number is greater than or equal to the key, not strictly greater than the key as the problem states",
+        "fix_instruction": "Change the condition from 'num >= key' to 'num > key'.",
+        "fixed_code_name": "1691193123_2.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1691193123_1.py",
+        "code": "def first_num_greater_than(numbers_list, key):\n    num_greater_than_key = None\n\n    for num in numbers_list:\n        if num > key:\n            num_greater_than_key = num\n            break\n\n    return numbers_list",
+        "pass": false,
+        "expl_id": 1692109106,
+        "expl_instruction": "You're returning the entire list instead of the first number greater than the key",
+        "fix_instruction": "Change the return statement to return num_greater_than_key instead of numbers_list",
+        "fixed_code_name": "1691193123_2.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1691193138_1.py",
+        "code": "def first_num_greater_than(numbers_list, key):\n    for num in numbers_list:\n        if num > key or num == key:\n            return num",
+        "pass": false,
+        "expl_id": 1692109113,
+        "expl_instruction": "Your function returns the first number that is greater than or equal to the key. But you need to find the number that is strictly greater than the key",
+        "fix_instruction": "Remove the 'or num == key' from your condition.",
+        "fixed_code_name": "1691193088_0.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1691193138_3.py",
+        "code": "def first_num_greater_than(numbers_list, key):\n    for num in numbers_list:\n        if num > key:\n            print(num)",
+        "pass": false,
+        "expl_id": 1692109117,
+        "expl_instruction": "Your function is printing the number instead of returning it, so it always returns None",
+        "fix_instruction": "Replace the print statement with a return statement.",
+        "fixed_code_name": "1691193088_0.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1691193149_0_fixed_1692122266.py",
+        "code": "def first_num_greater_than(numbers_list, key):\n    i = 0\n    while i < len(numbers_list):\n        if numbers_list[i] > key:\n            return numbers_list[i]\n        i += 1\n    return None",
+        "pass": true,
+        "display_distractor": false
+    },
+    {
+        "code_name": "1691193149_0.py",
+        "code": "def first_num_greater_than(numbers_list, key):\n    i = 0\n    while i < len(numbers_list):\n        if numbers_list[i] > key:\n            return numbers_list[i]\n        i\n    return None",
+        "pass": false,
+        "expl_id": 1692109130,
+        "expl_instruction": "You forgot to increment the variable 'i' in your loop, so your function only checks if the first number in the list is greater than key and just loop forever if not",
+        "fix_instruction": "Add 'i += 1' after the 'if' statement to increment 'i' by 1 each time the loop runs.",
+        "fixed_code_name": "1691193149_0_fixed_1692122266.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1691193149_2.py",
+        "code": "def first_num_greater_than(numbers_list, key):\n    for num in numbers_list:\n        if num > key:\n            return num\n        else:\n            break\n    return None",
+        "pass": false,
+        "expl_id": 1692109135,
+        "expl_instruction": "The 'break' statement in the 'else' clause stops the loop after the first iteration if the first number is not greater than the key",
+        "fix_instruction": "Remove the 'else' clause and the 'break' statement to allow the loop to iterate over all numbers in the list.",
+        "fixed_code_name": "1691187115.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1691193160_1_bug1_fixed_1692122273.py",
+        "code": "def first_num_greater_than(numbers_list, key):\n    result = None\n    for num in numbers_list:\n        if num > key:\n            result = num\n            break\n    return result",
+        "pass": true,
+        "display_distractor": false
+    },
+    {
+        "code_name": "1691193160_1.py",
+        "code": "def first_num_greater_than(numbers_list, key):\n    result = None\n    for num in numbers_list:\n        if num > key:\n            result = num\n        else:\n            result = None\n    return result",
+        "pass": false,
+        "expl_id": 1692109144,
+        "expl_instruction": "Your code is overwriting the result variable in each iteration, even if it finds a number greater than the key, so it will return the last num instead of first num greater than key.",
+        "fix_instruction": "You should break the loop as soon as you find a number greater than the key.. You should remove the else clause, it's unnecessary as result is already initialized to None..",
+        "fixed_code_name": "1691193160_1_bug1_fixed_1692122273.py",
+        "display_distractor": false
+    }
+]

@@ -1,0 +1,311 @@
+[
+    {
+        "code_name": "1692890001_2.py",
+        "code": "def remove_extras(lst):\n    new_lst = []\n    for i in range(len(lst)):\n        if lst[i] not in new_lst:\n            new_lst.append(lst[i])\n    return new_lst",
+        "pass": true,
+        "display_distractor": false
+    },
+    {
+        "code_name": "1692890010_0.py",
+        "code": "def remove_extras(lst):\n    new_lst = []\n    for num in lst:\n        if num not in new_lst:  # Mistake: using 'not in' instead of 'in'\n            new_lst.append(num)\n    return new_lst",
+        "pass": true,
+        "display_distractor": false
+    },
+    {
+        "code_name": "1692890010_1.py",
+        "code": "def remove_extras(lst):\n    new_lst = []\n    for i in range(len(lst)):  # Mistake: using len(lst) instead of len(new_lst)\n        if lst[i] not in lst[:i]:  # Mistake: using lst[:i] instead of new_lst\n            new_lst.append(lst[i])\n    return new_lst",
+        "pass": true,
+        "display_distractor": false
+    },
+    {
+        "code_name": "1692890030_1.py",
+        "code": "def remove_extras(lst):\n    new_lst = []\n    for num in lst:\n        if num not in new_lst:\n            new_lst.append(num)\n    return new_lst",
+        "pass": true,
+        "display_distractor": false
+    },
+    {
+        "code_name": "1692890051_0.py",
+        "code": "def remove_extras(lst):\n    new_lst = []\n    for num in lst:\n        if new_lst.count(num) == 0:\n            new_lst.append(num)\n    return new_lst",
+        "pass": true,
+        "display_distractor": false
+    },
+    {
+        "code_name": "1692890051_2.py",
+        "code": "def remove_extras(lst):\n    new_lst = []\n    for i in range(len(lst)):\n        if lst[i] in new_lst:\n            continue\n        new_lst.append(lst[i])\n    return new_lst",
+        "pass": true,
+        "display_distractor": false
+    },
+    {
+        "code_name": "1692890001_0.py",
+        "code": "def remove_extras(lst):\n    new_lst = []\n    for i in range(len(lst)):\n        if lst.count(lst[i]) < 2:\n            new_lst.append(lst[i])\n    return new_lst",
+        "pass": false,
+        "expl_instruction": "Your code is checking if the count of each element is less than 2, which means it only adds elements that appear once in the list. However, the problem statement requires you to keep the first occurrence of each element, even if it appears more than once",
+        "fix_instruction": "Instead of checking the count of each element, check if the element is already in new_lst before adding it.",
+        "fixed_code_name": "1692890001_2.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1692890001_1.py",
+        "code": "def remove_extras(lst):\n    new_lst = []\n    for i in range(len(lst)):\n        if lst.count(lst[i]) == 1:\n            new_lst.append(lst[i])\n    return new_lst",
+        "pass": false,
+        "expl_instruction": "Your code only adds elements to the new list if they appear exactly once in the original list. So if an element appears more than once, it is not included. But this function requires you to include one occurrence of each element in the original list",
+        "fix_instruction": "Instead of checking if the count of the element is 1, check if the element is not already in the new list before adding it.",
+        "fixed_code_name": "1692890001_2.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1692890001_3.py",
+        "code": "def remove_extras(lst):\n    new_lst = []\n    for i in range(len(lst)):\n        if lst[i] not in lst[i+1:]:\n            new_lst.append(lst[i])\n    return new_lst",
+        "pass": false,
+        "expl_instruction": "Your code checks if an element is in the rest of the list (from its position onwards). This means it will keep the last occurrence of each element, not the first",
+        "fix_instruction": "Check if the element is in the new list before appending it.",
+        "fixed_code_name": "1692890001_2.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1692890010_2.py",
+        "code": "def remove_extras(lst):\n    new_lst = []\n    for num in lst:\n        if lst.count(num) == 1:\n            new_lst.append(num)\n    return new_lst",
+        "pass": false,
+        "expl_instruction": "Your code is currently checking if the count of a number in the list is 1, which means it only adds elements that appear once in the list. However, the problem statement requires you to remove extra occurrences, so even if an element appears more than once, it should still be included in the new list, but only once.",
+        "fix_instruction": "Instead of checking if the count is 1, check if the number is not already in the new list before appending.",
+        "fixed_code_name": "1692890030_1.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1692890030_2.py",
+        "code": "def remove_extras(lst):\n    for num in lst:\n        if lst.count(num) > 1:\n            lst.remove(num)",
+        "pass": false,
+        "expl_instruction": "Your code is trying to modify the list while iterating over it, which can lead to unexpected behavior and missed elements. Your code does not return anything, so the default value will be None.",
+        "fix_instruction": "Create a new list to store the unique elements.. return the list with duplicates removed..",
+        "fixed_code_name": "1692890030_1.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1692890030_3.py",
+        "code": "def remove_extras(lst):\n    for num in lst:\n        if lst.count(num) > 1:\n            lst.remove(num)\n    return lst",
+        "pass": false,
+        "expl_instruction": "Your code is modifying the list while iterating over it, which can lead to unexpected behavior and missed elements",
+        "fix_instruction": "Create a new list to store the unique elements and return this new list.",
+        "fixed_code_name": "1692890030_1.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1692890030_4.py",
+        "code": "def remove_extras(lst):\n    new_lst = []\n    for i in range(len(lst)):\n        if i == 0 or lst[i] != lst[i-1]:\n            new_lst.append(lst[i])\n    return new_lst",
+        "pass": false,
+        "expl_instruction": "Your code only checks if the current element is the same as the previous one, which only works for sorted lists. If the list is not sorted, it will not remove all duplicates",
+        "fix_instruction": "Instead of comparing to the previous element, check if the element is already in new_lst before appending.",
+        "fixed_code_name": "1692890001_2.py",
+        "display_distractor": true,
+        "distractor_dict": {
+            "1692890001_3.py": {
+                "diff_test_hint": "But if that's the case, shouldn't remove_extras([5, 2, 1, 2, 3]) give me [5, 1, 2, 3]? Currently my code would output [5, 2, 1, 2, 3].",
+                "diff_test": [
+                    "[5, 2, 1, 2, 3]",
+                    "[5, 2, 1, 2, 3]",
+                    "[5, 1, 2, 3]"
+                ]
+            },
+            "1692890030_3.py": {
+                "diff_test_hint": "But if that's the case, shouldn't remove_extras([5, 2, 1, 2, 3]) give me [5, 1, 2, 3]? Currently my code would output [5, 2, 1, 2, 3].",
+                "diff_test": [
+                    "[5, 2, 1, 2, 3]",
+                    "[5, 2, 1, 2, 3]",
+                    "[5, 1, 2, 3]"
+                ]
+            }
+        }
+    },
+    {
+        "code_name": "1692890040_1.py",
+        "code": "def remove_extras(lst):\n    new_lst = []\n    for num in lst:\n        if num not in new_lst:\n            new_lst.append(num)",
+        "pass": false,
+        "expl_instruction": "Your code correctly creates a new list and appends unique elements from the input list. However, it does not return any result as function does not return the new list",
+        "fix_instruction": "Add a return statement at the end of your function to return new_lst.",
+        "fixed_code_name": "1692890030_1.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1692890040_2_fixed_1692902769.py",
+        "code": "def remove_extras(lst):\n    new_lst = []\n    for num in lst:\n        if num in new_lst:\n            continue\n        else:\n            new_lst.append(num)\n    return new_lst",
+        "pass": true,
+        "display_distractor": false
+    },
+    {
+        "code_name": "1692890040_2.py",
+        "code": "def remove_extras(lst):\n    new_lst = []\n    for num in lst:\n        if lst.count(num) > 1:\n            new_lst.remove(num)\n        else:\n            new_lst.append(num)\n    return new_lst",
+        "pass": false,
+        "expl_instruction": "Your code is trying to remove a number from new_lst when it's found more than once in lst. However, new_lst is initially empty and may not contain the number at all, leading to an error",
+        "fix_instruction": "Instead of removing the number from new_lst, you should check if the number is already in new_lst before appending it.",
+        "fixed_code_name": "1692890040_2_fixed_1692902769.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1692890030_3_fixed_1692902764.py",
+        "code": "def remove_extras(lst):\n    unique_lst = []\n    for num in lst:\n        if num not in unique_lst:\n            unique_lst.append(num)\n    return unique_lst",
+        "pass": true,
+        "display_distractor": false
+    },
+    {
+        "code_name": "1692890040_3.py",
+        "code": "def remove_extras(lst):\n    for num in lst:\n        while lst.count(num) > 1:\n            lst.remove(num)\n    return lst",
+        "pass": false,
+        "expl_instruction": "Your code modifies the list while iterating over it, which can lead to unexpected behavior or errors",
+        "fix_instruction": "Create a new list to store the unique elements and return this new list.",
+        "fixed_code_name": "1692890030_3_fixed_1692902764.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1692890040_2_fixed_1692902769.py",
+        "code": "def remove_extras(lst):\n    new_lst = []\n    for num in lst:\n        if num in new_lst:\n            continue\n        else:\n            new_lst.append(num)\n    return new_lst",
+        "pass": true,
+        "display_distractor": false
+    },
+    {
+        "code_name": "1692890040_4.py",
+        "code": "def remove_extras(lst):\n    new_lst = []\n    for num in lst:\n        if num in new_lst:\n            new_lst.remove(num)\n        else:\n            new_lst.append(num)\n    return new_lst",
+        "pass": false,
+        "expl_instruction": "Your code is removing the number from new_lst if it already exists there. This is incorrect as it will remove the first occurrence of the number, not the repeated ones",
+        "fix_instruction": "Instead of removing the number, just continue to the next iteration when the number already exists in new_lst.",
+        "fixed_code_name": "1692890040_2_fixed_1692902769.py",
+        "display_distractor": true,
+        "distractor_dict": {
+            "1692890001_0.py": {
+                "diff_test_hint": "But if that's the case, shouldn't remove_extras([5, 2, 2, 2, 3]) give me [5, 3]? Currently my code would output [5, 2, 3].",
+                "diff_test": [
+                    "[5, 2, 2, 2, 3]",
+                    "[5, 2, 3]",
+                    "[5, 3]"
+                ]
+            },
+            "1692890040_2.py": {
+                "diff_test_hint": "But if that's the case, shouldn't remove_extras([1, 1, 2, 3]) give me <class 'ValueError'> list.remove(x): x not in list? Currently my code would output [2, 3].",
+                "diff_test": [
+                    "[1, 1, 2, 3]",
+                    "[2, 3]",
+                    "<ValueError> list.remove(x): x not in list"
+                ]
+            }
+        }
+    },
+    {
+        "code_name": "1692890061_0.py",
+        "code": "def remove_extras(lst):\n    new_lst = []\n    for i in range(len(lst) + 1):\n        if lst.count(lst[i]) == 1:\n            new_lst.append(lst[i])\n    return new_lst",
+        "pass": false,
+        "expl_instruction": "You're looping from 0 to len(lst) + 1, which is one index beyond the end of lst. Also, your function only adds elements to new_lst if they appear exactly once in lst, which is wrong as an element appears more than once will not be included in new_lst.",
+        "fix_instruction": "Change the loop condition to range(len(lst)) to stay within the list's bounds.. Instead of checking if the count is 1, check if the element is not already in new_lst before appending..",
+        "fixed_code_name": "1692890001_2.py",
+        "display_distractor": true,
+        "distractor_dict": {
+            "1692890061_1.py": {
+                "diff_test_hint": "But if that's the case, shouldn't remove_extras([]) give me []? Currently my code would output <class 'IndexError'> list index out of range.",
+                "diff_test": [
+                    "[]",
+                    "<IndexError> list index out of range",
+                    "[]"
+                ]
+            },
+            "1692890061_2.py": {
+                "diff_test_hint": "But if that's the case, shouldn't remove_extras([]) give me []? Currently my code would output <class 'IndexError'> list index out of range.",
+                "diff_test": [
+                    "[]",
+                    "<IndexError> list index out of range",
+                    "[]"
+                ]
+            }
+        }
+    },
+    {
+        "code_name": "1692890010_2_fixed_1692902759.py",
+        "code": "def remove_extras(lst):\n    new_lst = []\n    for num in lst:\n        if num not in new_lst: \n            new_lst.append(num)\n    return new_lst",
+        "pass": true,
+        "display_distractor": false
+    },
+    {
+        "code_name": "1692890061_1.py",
+        "code": "def remove_extras(lst):\n    new_lst = []\n    for num in lst:\n        if lst.count(num) != 1:\n            new_lst.append(num)\n    return new_lst",
+        "pass": false,
+        "expl_instruction": "Your code is currently appending numbers that appear more than once in the list, instead of excluding the duplicates. This is the opposite of what you want to achieve",
+        "fix_instruction": "Append numbers to new_lst only if they are not already in new_lst.",
+        "fixed_code_name": "1692890010_2_fixed_1692902759.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1692890061_2.py",
+        "code": "def remove_extras(lst):\n    new_lst = []\n    for num in lst:\n        if new_list.count(num) == 1:\n            new_lst.append(num)\n    return new_lst",
+        "pass": false,
+        "expl_instruction": "You're using an undefined variable 'new_list' instead of 'new_lst' in your if condition. Also your if condition checks if the count of 'num' in 'new_list' is 1 and only append 'num' to 'new_lst' if it already exists, which is never true.",
+        "fix_instruction": "Replace 'new_list' with 'new_lst' in your if condition.. Change the if condition to check if 'num' is not in 'new_list' before appending.",
+        "fixed_code_name": "1692890030_1.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1692890061_4_fixed_1693167143.py",
+        "code": "def remove_extras(lst):\n    new_lst = []  # Initialize new_lst as an empty list\n    for num in lst:\n        if num not in new_lst:  # Check if num is not already in new_lst\n            new_lst.append(num)\n    return new_lst",
+        "pass": true,
+        "display_distractor": false
+    },
+    {
+        "code_name": "1692890061_4.py",
+        "code": "def remove_extras(lst):\n    for num in lst:\n        if lst.count(num) == 1:\n            new_lst.append(num)\n    return new_lst",
+        "pass": false,
+        "expl_instruction": "You haven't initialized `new_lst` before using it, so you're trying to append to a list that doesn't exist. Your code only appends numbers that appear once in `lst` to `new_lst`, but you need to include the first occurrence of any number, even if it repeats.",
+        "fix_instruction": "Initialize `new_lst` as an empty list before the for loop.. Instead of checking if `lst.count(num) == 1`, check if `num` is not already in `new_lst`, then append it.",
+        "fixed_code_name": "1692890061_4_fixed_1693167143.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1692890074_1.py",
+        "code": "def remove_extras(lst):\n    new_lst = []\n    for i in range(len(lst)):\n        if lst[i] not in new_lst:\n            new_lst.append(i)\n    return new_lst",
+        "pass": false,
+        "expl_instruction": "Your code is appending the index 'i' to the new list, not the actual element from the original list",
+        "fix_instruction": "Change 'new_lst.append(i)' to 'new_lst.append(lst[i])'",
+        "fixed_code_name": "1692890001_2.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1692890074_3.py",
+        "code": "def remove_extras(lst):\n    new_lst = []\n    for num in lst:\n        if num not in new_lst:\n            new_lst.append(lst)\n    return new_lst",
+        "pass": false,
+        "expl_instruction": "Your code is appending the entire list (lst) to new_lst when it should be appending the individual number (num). This results in a list of lists instead of a list of integers",
+        "fix_instruction": "Replace lst with num in the append statement.",
+        "fixed_code_name": "1692890030_1.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1692890082_0.py",
+        "code": "def remove_extras(lst):\n    new_lst = []\n    for num in lst:\n        if new_lst.count(num) > 1:\n            new_lst.remove(num)\n    return new_lst",
+        "pass": false,
+        "expl_instruction": "Your code doesn't add any elements to `new_lst` and checks if `num` appears more than once in `new_lst`. So `new_lst` remains empty throughout the loop, and the function returns an empty list",
+        "fix_instruction": "Check if `num` is in `new_lst` before appending it. Don't use `remove`, instead append `num` to `new_lst` if it's not already in the list. ",
+        "fixed_code_name": "1692890030_1.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1692890082_2.py",
+        "code": "def remove_extras(lst):\n    new_lst = []\n    for num in lst:\n        if num in new_lst:\n            new_lst.remove(num)\n    return new_lst",
+        "pass": false,
+        "expl_instruction": "Your code is removing the number from new_lst if it already exists in it. This is opposite of what you want to achieve. You want to add the number to new_lst only if it does not already exist in it",
+        "fix_instruction": "Instead of removing the number from new_lst if it exist, add a condition to check if the number is not in new_lst before adding it.",
+        "fixed_code_name": "1692890030_1.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1692890089_0.py",
+        "code": "def remove_extras(lst):\n    new_lst = []\n    for i in range(len(lst)):\n        if lst[i] != new_lst[i]:\n            new_lst.append(lst[i])\n    return new_lst",
+        "pass": false,
+        "expl_instruction": "Your code tries to compare elements in `lst` and `new_lst` at the same index `i`. However, `new_lst` starts empty and may not have an element at index `i`, causing an `IndexError`",
+        "fix_instruction": "Instead of comparing elements at the same index, check if `lst[i]` is in `new_lst` before appending.",
+        "fixed_code_name": "1692890001_2.py",
+        "display_distractor": false
+    },
+    {
+        "code_name": "1692890089_2.py",
+        "code": "def remove_extras(lst):\n    for i in range(len(lst)):\n        if lst.count(lst[i]) > 1:\n            lst.pop(i)\n    return lst",
+        "pass": false,
+        "expl_instruction": "Your code is using the pop() method which removes an element at a specific index. If an element is removed, the indices of the elements that come after it are changed",
+        "fix_instruction": "Instead of removing elements, add the unique elements to a new list.",
+        "fixed_code_name": "1692890001_2.py",
+        "display_distractor": false
+    }
+]

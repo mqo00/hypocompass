@@ -1,0 +1,46 @@
+# for demo
+[1, 2, 3], 2
+[1, 2, 3], 1
+
+# empty case, return None
+[], 2
+
+# duplicate element, return None
+[1], 1
+[1, 1, 1, 1, 1], 1
+
+# negative number, 0
+[0, 1, 2], -1
+
+# sorted influence?, 5
+[5, 4, 3, 2, 1], 0
+
+# return 1
+[1, 3, 4, 2], 0
+
+# return 3
+[1, 3, 4, 2], 1
+
+# return 3
+[1, 3, 4, 2], 2
+
+# return 4
+[1, 3, 4, 2], 3
+
+# return None
+[1, 3, 4, 2], 4
+
+# return None
+[1, 3, 4, 2], 5
+
+# print(first_num_greater_than(sample_List, 2)) 3
+[3, 7, 18, 9, 18, 42, 4, 35, 45], 2
+
+# print(first_num_greater_than(sample_List, 18)) 42
+[3, 7, 18, 9, 18, 42, 4, 35, 45], 18
+
+# print(first_num_greater_than(sample_List,100)) None
+[3, 7, 18, 9, 18, 42, 4, 35, 45], 100
+
+# print(first_num_greater_than(sample_List, 8)) 18
+[3, 7, 18, 9, 18, 42, 4, 35, 45], 8

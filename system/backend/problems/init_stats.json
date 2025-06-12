@@ -1,0 +1,40 @@
+{
+  "problems": ["num_smaller", "first_num_greater_than"],
+  "codes": {
+    "remove_extras": [
+      "1692890030_4.py", 
+      "1692890040_4.py", 
+      "1692890061_0.py"
+    ],
+    "num_smaller": [
+      "1692926163_2.py", 
+      "1692926195_1.py", 
+      "1692926195_4.py"
+    ],
+    "first_num_greater_than": [
+      "1691187177.py",
+      "1691188734_1.py",
+      "1691193088_2.py"
+    ]
+  },
+  "testgroups": {
+    "remove_extras": [
+      "1. Removing repeated occurrences",
+      "2. Preserving order of elements",
+      "3. Handling empty list input",
+      "4. Enter your own group"
+    ],
+    "num_smaller": [
+      "1. x is present in seq",
+      "2. x is smaller than everything in seq",
+      "3. x is greater than everything in seq",
+      "4. Enter your own group"
+    ],
+    "first_num_greater_than": [
+      "1. No number in list greater than key",
+      "2. Key in middle of list",
+      "3. All numbers in list greater than key",
+      "4. Enter your own group"
+    ]
+  }
+}

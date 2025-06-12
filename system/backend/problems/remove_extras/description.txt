@@ -1,0 +1,1 @@
+Function remove_extras(lst) takes in a list of integers and returns a new list with the first occurrence of each element, which is the same as lst but with all repeated occurrences of any element removed.

@@ -1,0 +1,20 @@
+source	filename	{}	{'1': 'a'}	{'1': 'a', '2': 'b', '3': 'c', '4': 'd'}	{'1': 'a', '2': 'b', '3': 'a'}	{'1': 'a', '2': 'a', '3': 'a'}
+instructor	refsol.py	{}	{'a': '1'}	{'a': '1', 'b': '2', 'c': '3', 'd': '4'}	{'a': '3', 'b': '2'}	{'a': '3'}
+gpt	1693230630_0.py	pass	{'1': 'a'}	{'1': 'a', '2': 'b', '3': 'c', '4': 'd'}	{'1': 'a', '2': 'b', '3': 'a'}	{'1': 'a', '2': 'a', '3': 'a'}
+gpt	1693230634_0.py	pass	{'a': 'a'}	{'a': 'a', 'b': 'b', 'c': 'c', 'd': 'd'}	{'a': 'a', 'b': 'b'}	{'a': 'a'}
+gpt	1693230634_1.py	pass	{'1': '1'}	{'1': '1', '2': '2', '3': '3', '4': '4'}	{'1': '1', '2': '2', '3': '3'}	{'1': '1', '2': '2', '3': '3'}
+gpt	1693230643_0.py	pass	{'a': 'a'}	{'a': 'a', 'b': 'b', 'c': 'c', 'd': 'd'}	{'a': 'a', 'b': 'b'}	{'a': 'a'}
+gpt	1693230650_1.py	pass	{'1': 'a'}	{'1': 'a', '2': 'b', '3': 'c', '4': 'd'}	{'1': 'a', '2': 'b', '3': 'a'}	{'1': 'a', '2': 'a', '3': 'a'}
+gpt	1693230660_0.py	pass	{'a': ['1']}	{'a': ['1'], 'b': ['2'], 'c': ['3'], 'd': ['4']}	{'a': ['1', '3'], 'b': ['2']}	{'a': ['1', '2', '3']}
+gpt	1693230660_1.py	pass	pass	pass	{'a': ['1', '3'], 'b': '2'}	{'a': [['1', '2'], '3']}
+gpt	1693230660_2.py	pass	pass	pass	<class 'AttributeError'> 'str' object has no attribute 'append'	<class 'AttributeError'> 'str' object has no attribute 'append'
+gpt	1693230666_0.py	pass	{'1': 'a'}	{'1': 'a', '2': 'b', '3': 'c', '4': 'd'}	{'1': 'a', '2': 'b', '3': 'a'}	{'1': 'a', '2': 'a', '3': 'a'}
+gpt	1693230666_1.py	pass	{'1': '1'}	{'1': '1', '2': '2', '3': '3', '4': '4'}	{'1': '1', '2': '2', '3': '3'}	{'1': '1', '2': '2', '3': '3'}
+gpt	1693230666_4.py	pass	<class 'ValueError'> not enough values to unpack (expected 2, got 1)	<class 'ValueError'> not enough values to unpack (expected 2, got 1)	<class 'ValueError'> not enough values to unpack (expected 2, got 1)	<class 'ValueError'> not enough values to unpack (expected 2, got 1)
+gpt	1693230678_0.py	pass	<class 'ValueError'> not enough values to unpack (expected 2, got 1)	<class 'ValueError'> not enough values to unpack (expected 2, got 1)	<class 'ValueError'> not enough values to unpack (expected 2, got 1)	<class 'ValueError'> not enough values to unpack (expected 2, got 1)
+gpt	1693230683_0.py	pass	{'a': ['1']}	{'a': ['1'], 'b': ['2'], 'c': ['3'], 'd': ['4']}	{'a': ['1', '3'], 'b': ['2']}	{'a': ['1', '2', '3']}
+gpt	1693230694_2.py	pass	pass	pass	{'a': '1', 'b': '2'}	{'a': '1'}
+gpt	1693230707_0.py	pass	{'a': None}	{'a': None, 'b': None, 'c': None, 'd': None}	{'a': None, 'b': None}	{'a': None}
+gpt	1693230726_0.py	pass	pass	pass	{'a': '1', 'b': '2'}	{'a': '1'}
+gpt	1693230726_1.py	pass	<class 'RuntimeError'> dictionary keys changed during iteration	<class 'RuntimeError'> dictionary keys changed during iteration	<class 'RuntimeError'> dictionary changed size during iteration	<class 'RuntimeError'> dictionary changed size during iteration
+gpt	1693230726_3.py	pass	{'1': 'a'}	{'1': 'a', '2': 'b', '3': 'c', '4': 'd'}	{'1': 'a', '2': 'b', '3': 'a'}	{'1': 'a', '2': 'a', '3': 'a'}

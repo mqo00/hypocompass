@@ -1,0 +1,30 @@
+source	filename	[9, 9, 4, 9, 7, 9, 3, 1, 6], 5	[9, 8, 4, 5, 7, 2, 3, 1, 6], 5	[4, 5, 2, 3, 1, 6], 6	[4, 5, 2, 3, 1, 6], 3	[4, 5, 2, 3, 1, 6], 0
+instructor	refsol.py	[9, 9, 9, 9, 7]	[9, 8, 7, 6, 5]	[6, 5, 4, 3, 2, 1]	[6, 5, 4]	[]
+gpt	1693192746_0.py	pass	[9, 8, 6, 5, 7]	[4, 5, 2, 3, 1, 6]	pass	pass
+gpt	1693192746_1.py	pass	[9, 8, 6, 5, 7]	[4, 5, 2, 3, 1, 6]	[6, 5, 3]	pass
+gpt	1693192746_2.py	[9, 9, 9, 9, 9]	[9, 8, 7, 6, 6]	pass	[6, 6, 6]	pass
+gpt	1693192804_2.py	<class 'ValueError'> list.remove(x): x not in list	<class 'ValueError'> list.remove(x): x not in list	<class 'ValueError'> list.remove(x): x not in list	<class 'ValueError'> list.remove(x): x not in list	pass
+gpt	1693192818_1.py	None	None	None	None	None
+gpt	1693192818_2.py	<class 'ValueError'> max() arg is an empty sequence	<class 'ValueError'> max() arg is an empty sequence	<class 'ValueError'> max() arg is an empty sequence	<class 'ValueError'> max() arg is an empty sequence	<class 'ValueError'> max() arg is an empty sequence
+gpt	1693192818_3.py	[6, 4, 3, 1]	[4, 3, 2, 1]	[]	[3, 2, 1]	[6, 5, 4, 3, 2, 1]
+gpt	1693192818_4.py	[1, 3, 4, 6, 7]	[1, 2, 3, 4, 5]	[1, 2, 3, 4, 5, 6]	[1, 2, 3]	pass
+gpt	1693192828_0.py	[9, 7, 6, 4, 3]	[6, 5, 4, 3, 2]	[6, 5, 4, 3, 2]	[4, 3, 2]	pass
+gpt	1693192828_1.py	<class 'TypeError'> 'NoneType' object is not subscriptable	<class 'TypeError'> 'NoneType' object is not subscriptable	<class 'TypeError'> 'NoneType' object is not subscriptable	<class 'TypeError'> 'NoneType' object is not subscriptable	<class 'TypeError'> 'NoneType' object is not subscriptable
+gpt	1693192828_2.py	[7, 6, 4, 3, 1]	[5, 4, 3, 2, 1]	pass	[3, 2, 1]	[6, 5, 4, 3, 2, 1]
+gpt	1693192839_3.py	<class 'ValueError'> max() arg is an empty sequence	<class 'ValueError'> max() arg is an empty sequence	<class 'ValueError'> max() arg is an empty sequence	<class 'ValueError'> max() arg is an empty sequence	pass
+gpt	1693192846_0.py	[1, 3, 4, 6, 7]	[1, 2, 3, 4, 5]	[1, 2, 3, 4, 5, 6]	[1, 2, 3]	pass
+gpt	1693192846_1.py	6	4	<class 'IndexError'> list index out of range	3	6
+gpt	1693192854_0.py	[7, 9, 9, 9, 9]	[5, 6, 7, 8, 9]	[1, 2, 3, 4, 5, 6]	[4, 5, 6]	[1, 2, 3, 4, 5, 6]
+gpt	1693192854_1.py	None	None	None	None	None
+gpt	1693192854_2.py	None	None	None	None	None
+gpt	1693192854_3.py	<class 'IndexError'> list index out of range	<class 'IndexError'> list index out of range	<class 'IndexError'> list index out of range	<class 'IndexError'> list index out of range	<class 'IndexError'> list index out of range
+gpt	1693192854_4.py	[6, 3, 7, 9, 9, 9, 9, 4, 1]	[6, 2, 4, 7, 9, 8, 5, 3, 1]	[6, 2, 4, 5, 3, 1]	[6, 2, 4, 5, 3, 1]	[6, 2, 4, 5, 3, 1]
+gpt	1693192862_1.py	[7, 9, 9, 9, 9]	[5, 6, 7, 8, 9]	[1, 2, 3, 4, 5, 6]	[4, 5, 6]	pass
+gpt	1693192862_2.py	[7, 9, 9, 9, 9]	[5, 6, 7, 8, 9]	[1, 2, 3, 4, 5, 6]	[4, 5, 6]	pass
+gpt	1693192869_2.py	[1, 3, 4, 6, 7]	[1, 2, 3, 4, 5]	[1, 2, 3, 4, 5, 6]	[1, 2, 3]	pass
+gpt	1693192876_1.py	<class 'NameError'> name 'result' is not defined	<class 'NameError'> name 'result' is not defined	<class 'NameError'> name 'result' is not defined	<class 'NameError'> name 'result' is not defined	<class 'NameError'> name 'result' is not defined
+gpt	1693192876_2.py	None	None	None	None	None
+gpt	1693192887_0.py	pass	pass	pass	pass	[6, 5, 4, 3, 2, 1]
+gpt	1693192891_0.py	[1, 3, 4, 6, 7]	[1, 2, 3, 4, 5]	[1, 2, 3, 4, 5, 6]	[1, 2, 3]	pass
+gpt	1693192891_1.py	[7, 6, 4, 3, 1]	[5, 4, 3, 2, 1]	pass	[3, 2, 1]	[6, 5, 4, 3, 2, 1]
+gpt	1693192891_3.py	[7, 9, 9, 9, 9]	[5, 6, 7, 8, 9]	[1, 2, 3, 4, 5, 6]	[4, 5, 6]	[1, 2, 3, 4, 5, 6]

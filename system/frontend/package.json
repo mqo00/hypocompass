@@ -1,0 +1,52 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": "http://localhost:8090",
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^12.1.5",
+    "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.2.2",
+    "bootstrap": "^5.2.2",
+    "html-react-parser": "^4.2.1",
+    "mobx": "^6.10.0",
+    "mobx-react-lite": "^4.0.3",
+    "prism-themes": "^1.9.0",
+    "react": "^17.0.2",
+    "react-beautiful-dnd": "^13.1.1",
+    "react-bootstrap": "^2.6.0",
+    "react-diff-view": "^2.5.0",
+    "react-dom": "^17.0.2",
+    "react-hook-form": "^7.41.5",
+    "react-select": "^5.7.3",
+    "react-spinners": "^0.13.8",
+    "react-syntax-highlighter": "^15.5.0",
+    "reactjs-popup": "^2.0.5",
+    "styled-components": "^5.3.6",
+    "unidiff": "^1.0.2",
+    "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "react-scripts": "^4.0.3"
+  },
+  "type": "module",
+  "scripts": {
+    "start": "PORT=8080 react-scripts start",
+    "backend": "cd ../backend && .venv/bin/python base.py",
+    "build": "PORT=8080 react-scripts build",
+    "test": "PORT=8080 react-scripts test",
+    "eject": "PORT=8080 react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all"
+  ]
+}

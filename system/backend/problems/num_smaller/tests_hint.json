@@ -1,0 +1,16 @@
+{
+    "[], 0": "Write a test case to cover the scenario where the input sequence is empty.",
+    "[1], 1": "Write a test case to cover the scenario where the sequence contains only one element equal to x.",
+    "[1], 2": "Write a test case to cover the scenario where the input sequence contains only one element smaller than the given integer.",
+    "[0], -1": "Write a test case to cover the scenario where the given integer x is smaller than all the elements in the sequence.",
+    "[10, 20, 30], 1": "Write a test case to cover the scenario where there are no elements in the sequence that are smaller than x.",
+    "[10, 20, 30], 40": "Write a test case to cover the scenario where all elements in the sorted sequence are strictly smaller than the given integer.",
+    "[10, 20, 30], 15": "Write a test case to cover the scenario where some elements in the sorted sequence are strictly smaller than the given integer and some are larger.",
+    "[10, 20, 20, 30], 25": "Write a test case to cover the scenario where some elements in the sorted sequence are strictly smaller than the given integer and some are larger.",
+    "[10, 20, 20, 30], 20": "Write a test case to cover the scenario where there are duplicate elements in the sequence equal to the given integer but there are also smaller and larger elements.",
+    "(1, 2, 3, 4), 2": "Write a test case to cover the scenario where some elements in the sorted sequence are strictly smaller than the given integer and some are larger.",
+    "[10, 10, 10, 20, 30], 0": "Write a test case to cover the scenario where there are no elements in the sequence that are strictly smaller than x.",
+    "[10, 10, 10, 20, 30], 10": "Write a test case to cover the scenario where the sequence contains only elements that are equal to or greater than x, resulting in the function returning 0.",
+    "[10, 10, 20, 30, 30], 30": "Write a test case to cover the scenario where elements in a sorted sequence are smaller than or equal to a given integer, including handling duplicate elements.",
+    "[10, 10, 20, 30, 30], 40": "Write a test case to cover the scenario where all elements in the sequence are smaller than the given integer x, so the function should return the total count of elements in the sequence."
+}
