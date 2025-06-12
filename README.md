@@ -1,6 +1,6 @@
 # How to Teach Programming in the AI Era? Using LLMs as a Teachable Agent for Debugging [(Paper)](https://arxiv.org/abs/2310.05292)
 
-**🏆 Best Paper** @ [AIED 2024](https://link.springer.com/chapter/10.1007/978-3-031-64302-6_19)
+**🏆 Best Paper** @ [AIED 2024](https://link.springer.com/chapter/10.1007/978-3-031-64302-6_19). Media Coverage: [The Link](https://magazine.cs.cmu.edu/promoting-critical-thinking-in-ai-education-models#:~:text=Award)
 
 ![HypoCompass System Illustration](study_material/image.png)
 
