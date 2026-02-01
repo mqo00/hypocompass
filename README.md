@@ -1,6 +1,6 @@
-# How to Teach Programming in the AI Era? Using LLMs as a Teachable Agent for Debugging [(Paper)](https://arxiv.org/abs/2310.05292)
+# How to Teach Programming in the AI Era? Using LLMs as a Teachable Agent for Debugging [(Paper)](https://link.springer.com/chapter/10.1007/978-3-031-64302-6_19) [(Arxiv)](https://arxiv.org/abs/2310.05292)
 
-**🏆 Best Paper** @ [AIED 2024](https://link.springer.com/chapter/10.1007/978-3-031-64302-6_19). Media Coverage: [The Link](https://magazine.cs.cmu.edu/promoting-critical-thinking-in-ai-education-models#:~:text=Award)
+**🏆 Best Paper** @ AIED 2024. Media Coverage: [The Link](https://magazine.cs.cmu.edu/promoting-critical-thinking-in-ai-education-models#:~:text=Award), [New York Times](https://www.nytimes.com/2025/11/12/opinion/ai-coding-computer-science.html?unlocked_article_code=1.0k8.XC9Y.whTHY-2Ecg9i&smid=url-share)
 
 ![HypoCompass System Illustration](study_material/image.png)
 
@@ -45,3 +45,23 @@ In HypoCompass, given a programming problem description (A), a student user (in 
 Video Demo for the training system: https://youtu.be/K0CkQjxbBSQ 
 
 You can also check out an interactive demo of HypoCompass hosted [here](http://141.148.1.3:8080/).
+
+
+## Citation:
+Ma, Q., Shen, H., Koedinger, K., Wu, S.T. (2024). How to Teach Programming in the AI Era? Using LLMs as a Teachable Agent for Debugging. In: Olney, A.M., Chounta, IA., Liu, Z., Santos, O.C., Bittencourt, I.I. (eds) Artificial Intelligence in Education. AIED 2024. Lecture Notes in Computer Science(), vol 14829. Springer, Cham. https://doi.org/10.1007/978-3-031-64302-6_19
+
+```
+@InProceedings{ma2024hypocompass,
+author="Ma, Qianou and Shen, Hua and Koedinger, Kenneth and Wu, Sherry Tongshuang",
+editor="Olney, Andrew M. and Chounta, Irene-Angelica and Liu, Zitao and Santos, Olga C. and Bittencourt, Ig Ibert",
+title="How to Teach Programming in the AI Era? Using LLMs as a Teachable Agent for Debugging",
+booktitle="Artificial Intelligence in Education",
+year="2024",
+publisher="Springer Nature Switzerland",
+address="Cham",
+pages="265--279",
+doi="10.1007/978-3-031-64302-6_19",
+url="https://doi.org/10.1007/978-3-031-64302-6_19",
+isbn="978-3-031-64302-6"
+}
+```
